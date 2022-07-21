@@ -1,0 +1,17 @@
+{
+  //"compilerOptions": {
+  //  "noImplicitAny": false,
+  //  "noEmitOnError": true,
+  //  "removeComments": false,
+  //  "sourceMap": true,
+  //  "target": "es5"
+  //},
+  //"exclude": [
+  //  "node_modules",
+  //  "wwwroot"
+  //]
+
+  "ConnectionString": {
+    "cnE": "Data Source=.\\enova;Initial Catalog=Firma_demo;Integrated Security=True"
+  }
+}

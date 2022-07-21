@@ -15,9 +15,9 @@ namespace MiniProjekt.DAL
         {
             _context = new DbAdresses();
         }
-        public List<Adress> GetAllAdresses()
+        public IList<Adress> GetAllAdresses()
         {
-            return _context.Adresses.ToList();
+            return _context.Adresy.ToList();
         }
     }
 }

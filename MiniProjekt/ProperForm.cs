@@ -20,6 +20,8 @@ namespace MiniProjekt
             InitializeComponent();
             _adressRepository = new AdressRepository();
             ConnectData();
+
+            WindowState = FormWindowState.Maximized;
         }
 
         private void ConnectData()

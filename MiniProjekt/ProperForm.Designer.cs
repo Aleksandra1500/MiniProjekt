@@ -68,10 +68,10 @@ namespace MiniProjekt
             // 
             // FromEnova
             // 
-            this.FromEnova.Location = new System.Drawing.Point(606, 12);
+            this.FromEnova.Location = new System.Drawing.Point(323, 12);
             this.FromEnova.MainView = this.gridView2;
             this.FromEnova.Name = "FromEnova";
-            this.FromEnova.Size = new System.Drawing.Size(449, 542);
+            this.FromEnova.Size = new System.Drawing.Size(817, 542);
             this.FromEnova.TabIndex = 1;
             this.FromEnova.UseEmbeddedNavigator = true;
             this.FromEnova.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -90,7 +90,7 @@ namespace MiniProjekt
             this.FromSubiekt.Location = new System.Drawing.Point(12, 12);
             this.FromSubiekt.MainView = this.gridView1;
             this.FromSubiekt.Name = "FromSubiekt";
-            this.FromSubiekt.Size = new System.Drawing.Size(452, 542);
+            this.FromSubiekt.Size = new System.Drawing.Size(248, 542);
             this.FromSubiekt.TabIndex = 2;
             this.FromSubiekt.UseEmbeddedNavigator = true;
             this.FromSubiekt.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -125,54 +125,54 @@ namespace MiniProjekt
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(1059, 43);
+            this.simpleButton6.Location = new System.Drawing.Point(1144, 43);
             this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(140, 27);
+            this.simpleButton6.Size = new System.Drawing.Size(55, 27);
             this.simpleButton6.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
             this.simpleButton6.TabIndex = 9;
             this.simpleButton6.Text = "Delete";
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(1059, 12);
+            this.simpleButton5.Location = new System.Drawing.Point(1144, 12);
             this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(140, 27);
+            this.simpleButton5.Size = new System.Drawing.Size(55, 27);
             this.simpleButton5.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
             this.simpleButton5.TabIndex = 8;
             this.simpleButton5.Text = "Edit";
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(1059, 74);
+            this.simpleButton4.Location = new System.Drawing.Point(1144, 74);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(140, 27);
+            this.simpleButton4.Size = new System.Drawing.Size(55, 27);
             this.simpleButton4.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
             this.simpleButton4.TabIndex = 7;
             this.simpleButton4.Text = "Add";
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(468, 43);
+            this.simpleButton3.Location = new System.Drawing.Point(264, 43);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(134, 27);
+            this.simpleButton3.Size = new System.Drawing.Size(55, 27);
             this.simpleButton3.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
             this.simpleButton3.TabIndex = 6;
             this.simpleButton3.Text = "Delete";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(468, 12);
+            this.simpleButton2.Location = new System.Drawing.Point(264, 12);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(134, 27);
+            this.simpleButton2.Size = new System.Drawing.Size(55, 27);
             this.simpleButton2.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
             this.simpleButton2.TabIndex = 5;
             this.simpleButton2.Text = "Edit";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(468, 74);
+            this.simpleButton1.Location = new System.Drawing.Point(264, 74);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(134, 27);
+            this.simpleButton1.Size = new System.Drawing.Size(55, 27);
             this.simpleButton1.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Add";
@@ -199,70 +199,70 @@ namespace MiniProjekt
             this.FromSubiektitem.Control = this.FromSubiekt;
             this.FromSubiektitem.Location = new System.Drawing.Point(0, 0);
             this.FromSubiektitem.Name = "FromSubiektitem";
-            this.FromSubiektitem.Size = new System.Drawing.Size(456, 546);
+            this.FromSubiektitem.Size = new System.Drawing.Size(252, 546);
             this.FromSubiektitem.TextSize = new System.Drawing.Size(0, 0);
             this.FromSubiektitem.TextVisible = false;
             // 
             // FromEnovaitem
             // 
             this.FromEnovaitem.Control = this.FromEnova;
-            this.FromEnovaitem.Location = new System.Drawing.Point(594, 0);
+            this.FromEnovaitem.Location = new System.Drawing.Point(311, 0);
             this.FromEnovaitem.Name = "FromEnovaitem";
-            this.FromEnovaitem.Size = new System.Drawing.Size(453, 546);
+            this.FromEnovaitem.Size = new System.Drawing.Size(821, 546);
             this.FromEnovaitem.TextSize = new System.Drawing.Size(0, 0);
             this.FromEnovaitem.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.simpleButton1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(456, 62);
+            this.layoutControlItem1.Location = new System.Drawing.Point(252, 62);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(138, 484);
+            this.layoutControlItem1.Size = new System.Drawing.Size(59, 484);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.simpleButton2;
-            this.layoutControlItem2.Location = new System.Drawing.Point(456, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(252, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(138, 31);
+            this.layoutControlItem2.Size = new System.Drawing.Size(59, 31);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.simpleButton3;
-            this.layoutControlItem3.Location = new System.Drawing.Point(456, 31);
+            this.layoutControlItem3.Location = new System.Drawing.Point(252, 31);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(138, 31);
+            this.layoutControlItem3.Size = new System.Drawing.Size(59, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.simpleButton4;
-            this.layoutControlItem4.Location = new System.Drawing.Point(1047, 62);
+            this.layoutControlItem4.Location = new System.Drawing.Point(1132, 62);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(144, 484);
+            this.layoutControlItem4.Size = new System.Drawing.Size(59, 484);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.simpleButton5;
-            this.layoutControlItem5.Location = new System.Drawing.Point(1047, 0);
+            this.layoutControlItem5.Location = new System.Drawing.Point(1132, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(144, 31);
+            this.layoutControlItem5.Size = new System.Drawing.Size(59, 31);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.simpleButton6;
-            this.layoutControlItem6.Location = new System.Drawing.Point(1047, 31);
+            this.layoutControlItem6.Location = new System.Drawing.Point(1132, 31);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(144, 31);
+            this.layoutControlItem6.Size = new System.Drawing.Size(59, 31);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 

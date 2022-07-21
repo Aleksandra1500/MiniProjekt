@@ -12,7 +12,7 @@ namespace MiniProjekt.DAL
     public class DbAdresses : DbContext
     {
         public DbAdresses() { }
-        public DbSet<Adress> Adresses { get; set; }
+        public DbSet<Adress> Adresy { get; set; }
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

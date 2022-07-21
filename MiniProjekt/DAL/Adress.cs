@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiniProjekt.DAL
 {
-    class Adress
+    public class Adress
     {
         public sbyte? ID { get; set; }
         public int Host { get; set; }

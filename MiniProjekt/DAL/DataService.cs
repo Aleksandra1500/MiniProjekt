@@ -23,16 +23,6 @@ namespace MiniProjekt
                 return db.Query<Email>("select * from adr_Email").ToList();
             }
         }
-
-        public static void DeleteRow()
-        {
-            string deleteSql = "delete from adr_Email";
-            using (var connection = new SqlConnection(ConfigurationManager.ConnectionStrings["cnS"].ConnectionString))
-            {
-                
-                var affectedRow = connection.Execute(deleteSql);
-            }
-        }
         #endregion
     }
 }

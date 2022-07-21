@@ -14,22 +14,23 @@ namespace MiniProjekt
 
     public partial class ProperForm : Form
     {
+        private AdressRepository _adressRepository;
         public ProperForm()
         {
             InitializeComponent();
+            _adressRepository = new AdressRepository();
             ConnectData();
         }
 
         private void ConnectData()
         {
             FromSubiekt.DataSource = DataService.GetAllEmails();
-            //FromEnova.DataSource = DbAdresses.GetAllAdresses();
+            FromEnova.DataSource = _adressRepository.GetAllAdresses();
         }
 
-        private void DeleteS_Click(object sender, EventArgs e)
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            DataService.DeleteRow();
-            Console.WriteLine("Something happened");
+            Console.WriteLine("ok");
         }
     }
 }

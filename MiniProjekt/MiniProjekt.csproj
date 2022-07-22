@@ -208,6 +208,11 @@
     <Compile Include="DAL\dbAdresses.cs" />
     <Compile Include="DAL\Email.cs" />
     <Compile Include="DAL\DataService.cs" />
+    <Compile Include="Firma_demoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Firma_demoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +244,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="cnstring.json" />
+    <None Include="Firma_demoDataSet.xsc">
+      <DependentUpon>Firma_demoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Firma_demoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Firma_demoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Firma_demoDataSet.xss">
+      <DependentUpon>Firma_demoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

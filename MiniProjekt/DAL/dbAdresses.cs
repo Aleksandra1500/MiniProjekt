@@ -24,7 +24,6 @@ namespace MiniProjekt.DAL
                     .Build();
 
                 optionsBuilder.UseSqlServer(configuration.GetConnectionString("cnE"));
-                //optionsBuilder.UseSqlServer(@"Data Source=.\enova;Initial Catalog=Firma_demo;Integrated Security=True");
             }
         }
     }

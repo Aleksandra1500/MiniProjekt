@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c75f403ce61d4952bebd6f1b5d60e472" Name="Diagram1" ZoomLevel="62">
+        <EntityTypeShape EntityType="OlaModel.sl_GrupaTw" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.sl_ModelTowar" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.sl_Rabat" Width="1.5" PointX="0.75" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.sl_StawkaVAT" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.tw__Towar" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.ui_Funkcja" Width="1.5" PointX="10.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.ui_Kolor" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.ui_Modul" Width="1.5" PointX="8" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OlaModel.ui_ModulPowiazany" Width="1.5" PointX="10.25" PointY="5.875" IsExpanded="true" />
+        <AssociationConnector Association="OlaModel.FK_tw__Towar_sl_GrupaTw" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_sl_ModelTowar_tw__Towar" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_tw__Towar_sl_Rabat" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_tw__Towar_sl_StawkaVAT" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_tw__Towar_sl_StawkaVAT1" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_tw__Towar_tw__Towar" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_ui_Funkcja_ui_Modul" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_ui_Modul_ui_Kolor" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_ui__Modul_ui_Modul" ManuallyRouted="false" />
+        <AssociationConnector Association="OlaModel.FK_ui_ModulPowiazany_ui_Modul" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

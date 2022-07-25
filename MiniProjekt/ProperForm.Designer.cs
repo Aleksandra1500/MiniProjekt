@@ -29,9 +29,10 @@ namespace MiniProjekt
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.FromSubiekt = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.FromEnova = new DevExpress.XtraGrid.GridControl();
-            this.firma_demoDataSet1 = new MiniProjekt.Firma_demoDataSet();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHost = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -54,8 +55,6 @@ namespace MiniProjekt
             this.colAdresFaks = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIdentyfikacjaAdresuGLN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStamp = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.FromSubiekt = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ProperFormlayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -66,12 +65,11 @@ namespace MiniProjekt
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.adresyTableAdapter1 = new MiniProjekt.Firma_demoDataSetTableAdapters.AdresyTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.FromEnova)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firma_demoDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FromSubiekt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FromEnova)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProperFormlayoutControl1ConvertedLayout)).BeginInit();
             this.ProperFormlayoutControl1ConvertedLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
@@ -82,26 +80,47 @@ namespace MiniProjekt
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.FromSubiekt;
+            this.gridView3.Name = "gridView3";
+            // 
+            // FromSubiekt
+            // 
+            this.FromSubiekt.AllowRestoreSelectionAndFocusedRow = DevExpress.Utils.DefaultBoolean.True;
+            this.FromSubiekt.DataSource = typeof(MiniProjekt.Models.sl_GrupaTw);
+            this.FromSubiekt.Location = new System.Drawing.Point(12, 12);
+            this.FromSubiekt.MainView = this.gridView1;
+            this.FromSubiekt.Name = "FromSubiekt";
+            this.FromSubiekt.Size = new System.Drawing.Size(312, 542);
+            this.FromSubiekt.TabIndex = 0;
+            this.FromSubiekt.UseEmbeddedNavigator = true;
+            this.FromSubiekt.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1,
+            this.gridView3});
+            this.FromSubiekt.Click += new System.EventHandler(this.FromSubiekt_Click);
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.FromSubiekt;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.NewItemRowText = "Add new row";
+            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            // 
             // FromEnova
             // 
             this.FromEnova.DataMember = "Adresy";
-            this.FromEnova.DataSource = this.firma_demoDataSet1;
-            gridLevelNode1.RelationName = "Level1";
-            this.FromEnova.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
             this.FromEnova.Location = new System.Drawing.Point(375, 12);
             this.FromEnova.MainView = this.gridView2;
             this.FromEnova.Name = "FromEnova";
             this.FromEnova.Size = new System.Drawing.Size(824, 542);
-            this.FromEnova.TabIndex = 1;
+            this.FromEnova.TabIndex = 3;
             this.FromEnova.UseEmbeddedNavigator = true;
             this.FromEnova.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
-            // 
-            // firma_demoDataSet1
-            // 
-            this.firma_demoDataSet1.DataSetName = "Firma_demoDataSet";
-            this.firma_demoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView2
             // 
@@ -321,28 +340,6 @@ namespace MiniProjekt
             this.colStamp.VisibleIndex = 20;
             this.colStamp.Width = 94;
             // 
-            // FromSubiekt
-            // 
-            this.FromSubiekt.AllowRestoreSelectionAndFocusedRow = DevExpress.Utils.DefaultBoolean.True;
-            this.FromSubiekt.Location = new System.Drawing.Point(12, 12);
-            this.FromSubiekt.MainView = this.gridView1;
-            this.FromSubiekt.Name = "FromSubiekt";
-            this.FromSubiekt.Size = new System.Drawing.Size(312, 542);
-            this.FromSubiekt.TabIndex = 2;
-            this.FromSubiekt.UseEmbeddedNavigator = true;
-            this.FromSubiekt.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.FromSubiekt;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.NewItemRowText = "Add new row";
-            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
-            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
-            // 
             // ProperFormlayoutControl1ConvertedLayout
             // 
             this.ProperFormlayoutControl1ConvertedLayout.Controls.Add(this.simpleButton3);
@@ -363,7 +360,7 @@ namespace MiniProjekt
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(43, 27);
             this.simpleButton3.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
-            this.simpleButton3.TabIndex = 6;
+            this.simpleButton3.TabIndex = 4;
             this.simpleButton3.Text = "Delete";
             // 
             // simpleButton2
@@ -372,7 +369,7 @@ namespace MiniProjekt
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(43, 27);
             this.simpleButton2.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
-            this.simpleButton2.TabIndex = 5;
+            this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Edit";
             // 
             // simpleButton1
@@ -381,7 +378,7 @@ namespace MiniProjekt
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(43, 27);
             this.simpleButton1.StyleController = this.ProperFormlayoutControl1ConvertedLayout;
-            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Add";
             // 
             // layoutControlGroup1
@@ -443,10 +440,6 @@ namespace MiniProjekt
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // adresyTableAdapter1
-            // 
-            this.adresyTableAdapter1.ClearBeforeFill = true;
-            // 
             // ProperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -455,11 +448,11 @@ namespace MiniProjekt
             this.Controls.Add(this.ProperFormlayoutControl1ConvertedLayout);
             this.Name = "ProperForm";
             this.Text = "ProperForm";
-            ((System.ComponentModel.ISupportInitialize)(this.FromEnova)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firma_demoDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FromSubiekt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FromEnova)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProperFormlayoutControl1ConvertedLayout)).EndInit();
             this.ProperFormlayoutControl1ConvertedLayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
@@ -487,7 +480,6 @@ namespace MiniProjekt
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private Firma_demoDataSet firma_demoDataSet1;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
         private DevExpress.XtraGrid.Columns.GridColumn colHost;
         private DevExpress.XtraGrid.Columns.GridColumn colHostType;
@@ -509,6 +501,6 @@ namespace MiniProjekt
         private DevExpress.XtraGrid.Columns.GridColumn colAdresFaks;
         private DevExpress.XtraGrid.Columns.GridColumn colIdentyfikacjaAdresuGLN;
         private DevExpress.XtraGrid.Columns.GridColumn colStamp;
-        private Firma_demoDataSetTableAdapters.AdresyTableAdapter adresyTableAdapter1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }

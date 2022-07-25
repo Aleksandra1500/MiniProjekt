@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="OlaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sl_GrupaTw">
+          <Key>
+            <PropertyRef Name="grt_Id" />
+          </Key>
+          <Property Name="grt_Id" Type="int" Nullable="false" />
+          <Property Name="grt_Nazwa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="grt_NrAnalityka" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="sl_ModelTowar">
+          <Key>
+            <PropertyRef Name="mtw_Id" />
+          </Key>
+          <Property Name="mtw_Id" Type="int" Nullable="false" />
+          <Property Name="mtw_IdModel" Type="int" Nullable="false" />
+          <Property Name="mtw_IdTowar" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sl_Rabat">
+          <Key>
+            <PropertyRef Name="rt_id" />
+          </Key>
+          <Property Name="rt_id" Type="int" Nullable="false" />
+          <Property Name="rt_Nazwa" Type="varchar" MaxLength="50" />
+          <Property Name="rt_Rodzaj" Type="int" Nullable="false" />
+          <Property Name="rt_Procent" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sl_StawkaVAT">
+          <Key>
+            <PropertyRef Name="vat_Id" />
+          </Key>
+          <Property Name="vat_Id" Type="int" Nullable="false" />
+          <Property Name="vat_Nazwa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="vat_Stawka" Type="money" Nullable="false" />
+          <Property Name="vat_Symbol" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="vat_CzySystemowa" Type="bit" Nullable="false" />
+          <Property Name="vat_CzyWidoczna" Type="bit" Nullable="false" />
+          <Property Name="vat_Pozycja" Type="int" Nullable="false" />
+          <Property Name="vat_PozSprzedaz" Type="int" Nullable="false" />
+          <Property Name="vat_PozZakup" Type="int" Nullable="false" />
+          <Property Name="vat_PozRR" Type="int" Nullable="false" />
+          <Property Name="vat_PozDomyslna" Type="int" Nullable="false" />
+          <Property Name="vat_Rodzaj" Type="int" Nullable="false" />
+          <Property Name="vat_StawkaZagraniczna" Type="bit" Nullable="false" />
+          <Property Name="vat_StawkaZagranicznaPdst" Type="bit" />
+          <Property Name="vat_IdPanstwo" Type="int" />
+          <Property Name="vat_UePanstwo" Type="bit" />
+        </EntityType>
+        <EntityType Name="tw__Towar">
+          <Key>
+            <PropertyRef Name="tw_Id" />
+          </Key>
+          <Property Name="tw_Id" Type="int" Nullable="false" />
+          <Property Name="tw_Zablokowany" Type="bit" Nullable="false" />
+          <Property Name="tw_Rodzaj" Type="int" Nullable="false" />
+          <Property Name="tw_Symbol" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="tw_Nazwa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Opis" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tw_IdVatSp" Type="int" />
+          <Property Name="tw_IdVatZak" Type="int" />
+          <Property Name="tw_JakPrzySp" Type="bit" Nullable="false" />
+          <Property Name="tw_JednMiary" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tw_PKWiU" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="tw_SWW" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="tw_IdRabat" Type="int" />
+          <Property Name="tw_IdOpakowanie" Type="int" />
+          <Property Name="tw_PrzezWartosc" Type="bit" Nullable="false" />
+          <Property Name="tw_IdPodstDostawca" Type="int" />
+          <Property Name="tw_DostSymbol" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="tw_CzasDostawy" Type="int" />
+          <Property Name="tw_UrzNazwa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_PLU" Type="int" />
+          <Property Name="tw_PodstKodKresk" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="tw_IdTypKodu" Type="int" />
+          <Property Name="tw_CenaOtwarta" Type="bit" Nullable="false" />
+          <Property Name="tw_WagaEtykiet" Type="bit" />
+          <Property Name="tw_KontrolaTW" Type="bit" Nullable="false" />
+          <Property Name="tw_StanMin" Type="money" />
+          <Property Name="tw_JednStanMin" Type="varchar" MaxLength="10" />
+          <Property Name="tw_DniWaznosc" Type="int" />
+          <Property Name="tw_IdGrupa" Type="int" />
+          <Property Name="tw_WWW" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tw_SklepInternet" Type="bit" Nullable="false" />
+          <Property Name="tw_Pole1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Pole2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Pole3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Pole4" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Pole5" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Pole6" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Pole7" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Pole8" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tw_Uwagi" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="tw_Logo" Type="binary" MaxLength="50" />
+          <Property Name="tw_Usuniety" Type="bit" Nullable="false" />
+          <Property Name="tw_Objetosc" Type="money" />
+          <Property Name="tw_Masa" Type="money" />
+          <Property Name="tw_Charakter" Type="text" />
+          <Property Name="tw_JednMiaryZak" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tw_JMZakInna" Type="bit" Nullable="false" />
+          <Property Name="tw_KodTowaru" Type="varchar" MaxLength="20" />
+          <Property Name="tw_IdKrajuPochodzenia" Type="int" />
+          <Property Name="tw_IdUJM" Type="int" />
+          <Property Name="tw_JednMiarySprz" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="tw_JMSprzInna" Type="bit" Nullable="false" />
+          <Property Name="tw_SerwisAukcyjny" Type="bit" Nullable="false" />
+          <Property Name="tw_IdProducenta" Type="int" />
+          <Property Name="tw_SprzedazMobilna" Type="bit" Nullable="false" />
+          <Property Name="tw_IsFundPromocji" Type="bit" />
+          <Property Name="tw_IdFundPromocji" Type="int" />
+          <Property Name="tw_DomyslnaKategoria" Type="int" />
+          <Property Name="tw_Wysokosc" Type="money" />
+          <Property Name="tw_Szerokosc" Type="money" />
+          <Property Name="tw_Glebokosc" Type="money" />
+          <Property Name="tw_StanMaks" Type="money" />
+          <Property Name="tw_Akcyza" Type="bit" Nullable="false" />
+          <Property Name="tw_AkcyzaZaznacz" Type="bit" Nullable="false" />
+          <Property Name="tw_AkcyzaKwota" Type="money" />
+          <Property Name="tw_ObrotMarza" Type="bit" Nullable="false" />
+          <Property Name="tw_OdwrotneObciazenie" Type="bit" Nullable="false" />
+          <Property Name="tw_ProgKwotowyOO" Type="int" Nullable="false" />
+          <Property Name="tw_DodawalnyDoZW" Type="bit" Nullable="false" />
+          <Property Name="tw_isbn" Type="varchar" MaxLength="255" />
+          <Property Name="tw_bloz_7" Type="varchar" MaxLength="255" />
+          <Property Name="tw_bloz_12" Type="varchar" MaxLength="255" />
+          <Property Name="tw_KodUProducenta" Type="varchar" MaxLength="255" />
+          <Property Name="tw_Komunikat" Type="varchar" MaxLength="255" />
+          <Property Name="tw_KomunikatOd" Type="datetime" />
+          <Property Name="tw_KomunikatDokumenty" Type="int" Nullable="false" />
+          <Property Name="tw_MechanizmPodzielonejPlatnosci" Type="bit" Nullable="false" />
+          <Property Name="tw_GrupaJpkVat" Type="int" Nullable="false" />
+          <Property Name="tw_OplCukrowaPodlega" Type="bit" Nullable="false" />
+          <Property Name="tw_OplCukrowaObj" Type="money" />
+          <Property Name="tw_OplCukrowaZawartoscCukru" Type="money" />
+          <Property Name="tw_OplCukrowaInneSlodzace" Type="bit" Nullable="false" />
+          <Property Name="tw_OplCukrowaSok" Type="bit" Nullable="false" />
+          <Property Name="tw_OplCukrowaKwota" Type="money" />
+          <Property Name="tw_OplCukrowaKofeinaPodlega" Type="bit" Nullable="false" />
+          <Property Name="tw_OplCukrowaKofeinaKwota" Type="money" />
+          <Property Name="tw_OplCukrowaNapojWeglElektr" Type="bit" Nullable="false" />
+          <Property Name="tw_OplCukrowaKwotaPowyzej" Type="money" />
+          <Property Name="tw_MasaNetto" Type="money" />
+          <Property Name="tw_IdKoduWyrobuAkcyzowego" Type="int" />
+          <Property Name="tw_AkcyzaMarkaWyrobow" Type="varchar" MaxLength="350" Nullable="false" />
+          <Property Name="tw_AkcyzaWielkoscProducenta" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="tw_ZnakiAkcyzy" Type="int" />
+          <Property Name="tw_DataZmianyVatSprzedazy" Type="datetime" />
+          <Property Name="tw_WegielPodlegaOswiadczeniu" Type="bit" Nullable="false" />
+          <Property Name="tw_WegielOpisPochodzenia" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ui_Funkcja">
+          <Key>
+            <PropertyRef Name="uif_Id" />
+          </Key>
+          <Property Name="uif_Id" Type="int" Nullable="false" />
+          <Property Name="uif_IdModulu" Type="int" Nullable="false" />
+          <Property Name="uif_Worek" Type="int" Nullable="false" />
+          <Property Name="uif_Pozycja" Type="int" Nullable="false" />
+          <Property Name="uif_PozycjaOjca" Type="int" />
+          <Property Name="uif_TypOperacji" Type="int" />
+          <Property Name="uif_IdOperacji" Type="int" />
+          <Property Name="uif_Styl" Type="int" Nullable="false" />
+          <Property Name="uif_Napis" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="uif_Podwidok" Type="int" />
+          <Property Name="uif_Domyslna" Type="bit" Nullable="false" />
+          <Property Name="uif_Rozwijaj" Type="bit" />
+          <Property Name="uif_OdRazuMenu" Type="bit" />
+          <Property Name="uif_Parametr" Type="ntext" />
+        </EntityType>
+        <EntityType Name="ui_Kolor">
+          <Key>
+            <PropertyRef Name="uic_Id" />
+          </Key>
+          <Property Name="uic_Id" Type="int" Nullable="false" />
+          <Property Name="uic_Nazwa" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="uic_SerwisTloGora" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="uic_SerwisTloDol" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="uic_SerwisTekst" Type="varchar" MaxLength="11" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ui_Modul">
+          <Key>
+            <PropertyRef Name="uim_Id" />
+          </Key>
+          <Property Name="uim_Id" Type="int" Nullable="false" />
+          <Property Name="uim_Typ" Type="int" Nullable="false" />
+          <Property Name="uim_Program" Type="int" Nullable="false" />
+          <Property Name="uim_IdWzorca" Type="int" />
+          <Property Name="uim_Progid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="uim_TypKontekstu" Type="int" Nullable="false" />
+          <Property Name="uim_Kontekst" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="uim_Tytul" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="uim_Podtytul" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="uim_VespDef" Type="ntext" />
+          <Property Name="uim_XSLT" Type="ntext" />
+          <Property Name="uim_HTML" Type="bit" Nullable="false" />
+          <Property Name="uim_SchematKolorow" Type="int" Nullable="false" />
+          <Property Name="uim_FiltrWymagany" Type="bit" Nullable="false" />
+          <Property Name="uim_StatusNowosci" Type="int" Nullable="false" />
+          <Property Name="uim_Opis" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="uim_Ukryte" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ui_ModulPowiazany">
+          <Key>
+            <PropertyRef Name="uimp_Id" />
+          </Key>
+          <Property Name="uimp_Id" Type="int" Nullable="false" />
+          <Property Name="uimp_IdModulu" Type="int" Nullable="false" />
+          <Property Name="uimp_Typ" Type="int" Nullable="false" />
+          <Property Name="uimp_IdObiektu" Type="int" Nullable="false" />
+          <Property Name="uimp_Pozycja" Type="int" Nullable="false" />
+          <Property Name="uimp_Styl" Type="int" Nullable="false" />
+          <Property Name="uimp_Napis" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_sl_ModelTowar_tw__Towar">
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="sl_ModelTowar" Type="Self.sl_ModelTowar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tw__Towar">
+              <PropertyRef Name="tw_Id" />
+            </Principal>
+            <Dependent Role="sl_ModelTowar">
+              <PropertyRef Name="mtw_IdTowar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_sl_GrupaTw">
+          <End Role="sl_GrupaTw" Type="Self.sl_GrupaTw" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_GrupaTw">
+              <PropertyRef Name="grt_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdGrupa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_sl_Rabat">
+          <End Role="sl_Rabat" Type="Self.sl_Rabat" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_Rabat">
+              <PropertyRef Name="rt_id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdRabat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_sl_StawkaVAT">
+          <End Role="sl_StawkaVAT" Type="Self.sl_StawkaVAT" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_StawkaVAT">
+              <PropertyRef Name="vat_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdVatSp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_sl_StawkaVAT1">
+          <End Role="sl_StawkaVAT" Type="Self.sl_StawkaVAT" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_StawkaVAT">
+              <PropertyRef Name="vat_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdVatZak" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_tw__Towar">
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="0..1" />
+          <End Role="tw__Towar1" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tw__Towar">
+              <PropertyRef Name="tw_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar1">
+              <PropertyRef Name="tw_IdOpakowanie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui__Modul_ui_Modul">
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="0..1" />
+          <End Role="ui_Modul1" Type="Self.ui_Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Modul">
+              <PropertyRef Name="uim_Id" />
+            </Principal>
+            <Dependent Role="ui_Modul1">
+              <PropertyRef Name="uim_IdWzorca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui_Funkcja_ui_Modul">
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="1" />
+          <End Role="ui_Funkcja" Type="Self.ui_Funkcja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Modul">
+              <PropertyRef Name="uim_Id" />
+            </Principal>
+            <Dependent Role="ui_Funkcja">
+              <PropertyRef Name="uif_IdModulu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui_Modul_ui_Kolor">
+          <End Role="ui_Kolor" Type="Self.ui_Kolor" Multiplicity="1" />
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Kolor">
+              <PropertyRef Name="uic_Id" />
+            </Principal>
+            <Dependent Role="ui_Modul">
+              <PropertyRef Name="uim_SchematKolorow" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui_ModulPowiazany_ui_Modul">
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="1" />
+          <End Role="ui_ModulPowiazany" Type="Self.ui_ModulPowiazany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Modul">
+              <PropertyRef Name="uim_Id" />
+            </Principal>
+            <Dependent Role="ui_ModulPowiazany">
+              <PropertyRef Name="uimp_IdModulu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OlaModelStoreContainer">
+          <EntitySet Name="sl_GrupaTw" EntityType="Self.sl_GrupaTw" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sl_ModelTowar" EntityType="Self.sl_ModelTowar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sl_Rabat" EntityType="Self.sl_Rabat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sl_StawkaVAT" EntityType="Self.sl_StawkaVAT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tw__Towar" EntityType="Self.tw__Towar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ui_Funkcja" EntityType="Self.ui_Funkcja" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ui_Kolor" EntityType="Self.ui_Kolor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ui_Modul" EntityType="Self.ui_Modul" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ui_ModulPowiazany" EntityType="Self.ui_ModulPowiazany" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_sl_ModelTowar_tw__Towar" Association="Self.FK_sl_ModelTowar_tw__Towar">
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+            <End Role="sl_ModelTowar" EntitySet="sl_ModelTowar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_sl_GrupaTw" Association="Self.FK_tw__Towar_sl_GrupaTw">
+            <End Role="sl_GrupaTw" EntitySet="sl_GrupaTw" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_sl_Rabat" Association="Self.FK_tw__Towar_sl_Rabat">
+            <End Role="sl_Rabat" EntitySet="sl_Rabat" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_sl_StawkaVAT" Association="Self.FK_tw__Towar_sl_StawkaVAT">
+            <End Role="sl_StawkaVAT" EntitySet="sl_StawkaVAT" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_sl_StawkaVAT1" Association="Self.FK_tw__Towar_sl_StawkaVAT1">
+            <End Role="sl_StawkaVAT" EntitySet="sl_StawkaVAT" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_tw__Towar" Association="Self.FK_tw__Towar_tw__Towar">
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+            <End Role="tw__Towar1" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui__Modul_ui_Modul" Association="Self.FK_ui__Modul_ui_Modul">
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+            <End Role="ui_Modul1" EntitySet="ui_Modul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui_Funkcja_ui_Modul" Association="Self.FK_ui_Funkcja_ui_Modul">
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+            <End Role="ui_Funkcja" EntitySet="ui_Funkcja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui_Modul_ui_Kolor" Association="Self.FK_ui_Modul_ui_Kolor">
+            <End Role="ui_Kolor" EntitySet="ui_Kolor" />
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui_ModulPowiazany_ui_Modul" Association="Self.FK_ui_ModulPowiazany_ui_Modul">
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+            <End Role="ui_ModulPowiazany" EntitySet="ui_ModulPowiazany" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OlaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sl_GrupaTw">
+          <Key>
+            <PropertyRef Name="grt_Id" />
+          </Key>
+          <Property Name="grt_Id" Type="Int32" Nullable="false" />
+          <Property Name="grt_Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="grt_NrAnalityka" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tw__Towar" Relationship="Self.FK_tw__Towar_sl_GrupaTw" FromRole="sl_GrupaTw" ToRole="tw__Towar" />
+        </EntityType>
+        <EntityType Name="sl_ModelTowar">
+          <Key>
+            <PropertyRef Name="mtw_Id" />
+          </Key>
+          <Property Name="mtw_Id" Type="Int32" Nullable="false" />
+          <Property Name="mtw_IdModel" Type="Int32" Nullable="false" />
+          <Property Name="mtw_IdTowar" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tw__Towar" Relationship="Self.FK_sl_ModelTowar_tw__Towar" FromRole="sl_ModelTowar" ToRole="tw__Towar" />
+        </EntityType>
+        <EntityType Name="sl_Rabat">
+          <Key>
+            <PropertyRef Name="rt_id" />
+          </Key>
+          <Property Name="rt_id" Type="Int32" Nullable="false" />
+          <Property Name="rt_Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rt_Rodzaj" Type="Int32" Nullable="false" />
+          <Property Name="rt_Procent" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="tw__Towar" Relationship="Self.FK_tw__Towar_sl_Rabat" FromRole="sl_Rabat" ToRole="tw__Towar" />
+        </EntityType>
+        <EntityType Name="sl_StawkaVAT">
+          <Key>
+            <PropertyRef Name="vat_Id" />
+          </Key>
+          <Property Name="vat_Id" Type="Int32" Nullable="false" />
+          <Property Name="vat_Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vat_Stawka" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="vat_Symbol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vat_CzySystemowa" Type="Boolean" Nullable="false" />
+          <Property Name="vat_CzyWidoczna" Type="Boolean" Nullable="false" />
+          <Property Name="vat_Pozycja" Type="Int32" Nullable="false" />
+          <Property Name="vat_PozSprzedaz" Type="Int32" Nullable="false" />
+          <Property Name="vat_PozZakup" Type="Int32" Nullable="false" />
+          <Property Name="vat_PozRR" Type="Int32" Nullable="false" />
+          <Property Name="vat_PozDomyslna" Type="Int32" Nullable="false" />
+          <Property Name="vat_Rodzaj" Type="Int32" Nullable="false" />
+          <Property Name="vat_StawkaZagraniczna" Type="Boolean" Nullable="false" />
+          <Property Name="vat_StawkaZagranicznaPdst" Type="Boolean" />
+          <Property Name="vat_IdPanstwo" Type="Int32" />
+          <Property Name="vat_UePanstwo" Type="Boolean" />
+          <NavigationProperty Name="tw__Towar" Relationship="Self.FK_tw__Towar_sl_StawkaVAT" FromRole="sl_StawkaVAT" ToRole="tw__Towar" />
+          <NavigationProperty Name="tw__Towar1" Relationship="Self.FK_tw__Towar_sl_StawkaVAT1" FromRole="sl_StawkaVAT" ToRole="tw__Towar" />
+        </EntityType>
+        <EntityType Name="tw__Towar">
+          <Key>
+            <PropertyRef Name="tw_Id" />
+          </Key>
+          <Property Name="tw_Id" Type="Int32" Nullable="false" />
+          <Property Name="tw_Zablokowany" Type="Boolean" Nullable="false" />
+          <Property Name="tw_Rodzaj" Type="Int32" Nullable="false" />
+          <Property Name="tw_Symbol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_IdVatSp" Type="Int32" />
+          <Property Name="tw_IdVatZak" Type="Int32" />
+          <Property Name="tw_JakPrzySp" Type="Boolean" Nullable="false" />
+          <Property Name="tw_JednMiary" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_PKWiU" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_SWW" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_IdRabat" Type="Int32" />
+          <Property Name="tw_IdOpakowanie" Type="Int32" />
+          <Property Name="tw_PrzezWartosc" Type="Boolean" Nullable="false" />
+          <Property Name="tw_IdPodstDostawca" Type="Int32" />
+          <Property Name="tw_DostSymbol" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_CzasDostawy" Type="Int32" />
+          <Property Name="tw_UrzNazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_PLU" Type="Int32" />
+          <Property Name="tw_PodstKodKresk" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_IdTypKodu" Type="Int32" />
+          <Property Name="tw_CenaOtwarta" Type="Boolean" Nullable="false" />
+          <Property Name="tw_WagaEtykiet" Type="Boolean" />
+          <Property Name="tw_KontrolaTW" Type="Boolean" Nullable="false" />
+          <Property Name="tw_StanMin" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_JednStanMin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="tw_DniWaznosc" Type="Int32" />
+          <Property Name="tw_IdGrupa" Type="Int32" />
+          <Property Name="tw_WWW" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_SklepInternet" Type="Boolean" Nullable="false" />
+          <Property Name="tw_Pole1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Pole2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Pole3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Pole4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Pole5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Pole6" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Pole7" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Pole8" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Uwagi" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_Logo" Type="Binary" MaxLength="50" FixedLength="true" />
+          <Property Name="tw_Usuniety" Type="Boolean" Nullable="false" />
+          <Property Name="tw_Objetosc" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_Masa" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_Charakter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="tw_JednMiaryZak" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_JMZakInna" Type="Boolean" Nullable="false" />
+          <Property Name="tw_KodTowaru" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="tw_IdKrajuPochodzenia" Type="Int32" />
+          <Property Name="tw_IdUJM" Type="Int32" />
+          <Property Name="tw_JednMiarySprz" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_JMSprzInna" Type="Boolean" Nullable="false" />
+          <Property Name="tw_SerwisAukcyjny" Type="Boolean" Nullable="false" />
+          <Property Name="tw_IdProducenta" Type="Int32" />
+          <Property Name="tw_SprzedazMobilna" Type="Boolean" Nullable="false" />
+          <Property Name="tw_IsFundPromocji" Type="Boolean" />
+          <Property Name="tw_IdFundPromocji" Type="Int32" />
+          <Property Name="tw_DomyslnaKategoria" Type="Int32" />
+          <Property Name="tw_Wysokosc" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_Szerokosc" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_Glebokosc" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_StanMaks" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_Akcyza" Type="Boolean" Nullable="false" />
+          <Property Name="tw_AkcyzaZaznacz" Type="Boolean" Nullable="false" />
+          <Property Name="tw_AkcyzaKwota" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_ObrotMarza" Type="Boolean" Nullable="false" />
+          <Property Name="tw_OdwrotneObciazenie" Type="Boolean" Nullable="false" />
+          <Property Name="tw_ProgKwotowyOO" Type="Int32" Nullable="false" />
+          <Property Name="tw_DodawalnyDoZW" Type="Boolean" Nullable="false" />
+          <Property Name="tw_isbn" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tw_bloz_7" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tw_bloz_12" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tw_KodUProducenta" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tw_Komunikat" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="tw_KomunikatOd" Type="DateTime" Precision="3" />
+          <Property Name="tw_KomunikatDokumenty" Type="Int32" Nullable="false" />
+          <Property Name="tw_MechanizmPodzielonejPlatnosci" Type="Boolean" Nullable="false" />
+          <Property Name="tw_GrupaJpkVat" Type="Int32" Nullable="false" />
+          <Property Name="tw_OplCukrowaPodlega" Type="Boolean" Nullable="false" />
+          <Property Name="tw_OplCukrowaObj" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_OplCukrowaZawartoscCukru" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_OplCukrowaInneSlodzace" Type="Boolean" Nullable="false" />
+          <Property Name="tw_OplCukrowaSok" Type="Boolean" Nullable="false" />
+          <Property Name="tw_OplCukrowaKwota" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_OplCukrowaKofeinaPodlega" Type="Boolean" Nullable="false" />
+          <Property Name="tw_OplCukrowaKofeinaKwota" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_OplCukrowaNapojWeglElektr" Type="Boolean" Nullable="false" />
+          <Property Name="tw_OplCukrowaKwotaPowyzej" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_MasaNetto" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="tw_IdKoduWyrobuAkcyzowego" Type="Int32" />
+          <Property Name="tw_AkcyzaMarkaWyrobow" Type="String" MaxLength="350" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_AkcyzaWielkoscProducenta" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tw_ZnakiAkcyzy" Type="Int32" />
+          <Property Name="tw_DataZmianyVatSprzedazy" Type="DateTime" Precision="3" />
+          <Property Name="tw_WegielPodlegaOswiadczeniu" Type="Boolean" Nullable="false" />
+          <Property Name="tw_WegielOpisPochodzenia" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="sl_GrupaTw" Relationship="Self.FK_tw__Towar_sl_GrupaTw" FromRole="tw__Towar" ToRole="sl_GrupaTw" />
+          <NavigationProperty Name="sl_ModelTowar" Relationship="Self.FK_sl_ModelTowar_tw__Towar" FromRole="tw__Towar" ToRole="sl_ModelTowar" />
+          <NavigationProperty Name="sl_Rabat" Relationship="Self.FK_tw__Towar_sl_Rabat" FromRole="tw__Towar" ToRole="sl_Rabat" />
+          <NavigationProperty Name="sl_StawkaVAT" Relationship="Self.FK_tw__Towar_sl_StawkaVAT" FromRole="tw__Towar" ToRole="sl_StawkaVAT" />
+          <NavigationProperty Name="sl_StawkaVAT1" Relationship="Self.FK_tw__Towar_sl_StawkaVAT1" FromRole="tw__Towar" ToRole="sl_StawkaVAT" />
+          <NavigationProperty Name="tw__Towar1" Relationship="Self.FK_tw__Towar_tw__Towar" FromRole="tw__Towar" ToRole="tw__Towar1" />
+          <NavigationProperty Name="tw__Towar2" Relationship="Self.FK_tw__Towar_tw__Towar" FromRole="tw__Towar1" ToRole="tw__Towar" />
+        </EntityType>
+        <EntityType Name="ui_Funkcja">
+          <Key>
+            <PropertyRef Name="uif_Id" />
+          </Key>
+          <Property Name="uif_Id" Type="Int32" Nullable="false" />
+          <Property Name="uif_IdModulu" Type="Int32" Nullable="false" />
+          <Property Name="uif_Worek" Type="Int32" Nullable="false" />
+          <Property Name="uif_Pozycja" Type="Int32" Nullable="false" />
+          <Property Name="uif_PozycjaOjca" Type="Int32" />
+          <Property Name="uif_TypOperacji" Type="Int32" />
+          <Property Name="uif_IdOperacji" Type="Int32" />
+          <Property Name="uif_Styl" Type="Int32" Nullable="false" />
+          <Property Name="uif_Napis" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uif_Podwidok" Type="Int32" />
+          <Property Name="uif_Domyslna" Type="Boolean" Nullable="false" />
+          <Property Name="uif_Rozwijaj" Type="Boolean" />
+          <Property Name="uif_OdRazuMenu" Type="Boolean" />
+          <Property Name="uif_Parametr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ui_Modul" Relationship="Self.FK_ui_Funkcja_ui_Modul" FromRole="ui_Funkcja" ToRole="ui_Modul" />
+        </EntityType>
+        <EntityType Name="ui_Kolor">
+          <Key>
+            <PropertyRef Name="uic_Id" />
+          </Key>
+          <Property Name="uic_Id" Type="Int32" Nullable="false" />
+          <Property Name="uic_Nazwa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uic_SerwisTloGora" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uic_SerwisTloDol" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uic_SerwisTekst" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ui_Modul" Relationship="Self.FK_ui_Modul_ui_Kolor" FromRole="ui_Kolor" ToRole="ui_Modul" />
+        </EntityType>
+        <EntityType Name="ui_Modul">
+          <Key>
+            <PropertyRef Name="uim_Id" />
+          </Key>
+          <Property Name="uim_Id" Type="Int32" Nullable="false" />
+          <Property Name="uim_Typ" Type="Int32" Nullable="false" />
+          <Property Name="uim_Program" Type="Int32" Nullable="false" />
+          <Property Name="uim_IdWzorca" Type="Int32" />
+          <Property Name="uim_Progid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uim_TypKontekstu" Type="Int32" Nullable="false" />
+          <Property Name="uim_Kontekst" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uim_Tytul" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uim_Podtytul" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uim_VespDef" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="uim_XSLT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="uim_HTML" Type="Boolean" Nullable="false" />
+          <Property Name="uim_SchematKolorow" Type="Int32" Nullable="false" />
+          <Property Name="uim_FiltrWymagany" Type="Boolean" Nullable="false" />
+          <Property Name="uim_StatusNowosci" Type="Int32" Nullable="false" />
+          <Property Name="uim_Opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="uim_Ukryte" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ui_Funkcja" Relationship="Self.FK_ui_Funkcja_ui_Modul" FromRole="ui_Modul" ToRole="ui_Funkcja" />
+          <NavigationProperty Name="ui_Kolor" Relationship="Self.FK_ui_Modul_ui_Kolor" FromRole="ui_Modul" ToRole="ui_Kolor" />
+          <NavigationProperty Name="ui_Modul1" Relationship="Self.FK_ui__Modul_ui_Modul" FromRole="ui_Modul" ToRole="ui_Modul1" />
+          <NavigationProperty Name="ui_Modul2" Relationship="Self.FK_ui__Modul_ui_Modul" FromRole="ui_Modul1" ToRole="ui_Modul" />
+          <NavigationProperty Name="ui_ModulPowiazany" Relationship="Self.FK_ui_ModulPowiazany_ui_Modul" FromRole="ui_Modul" ToRole="ui_ModulPowiazany" />
+        </EntityType>
+        <EntityType Name="ui_ModulPowiazany">
+          <Key>
+            <PropertyRef Name="uimp_Id" />
+          </Key>
+          <Property Name="uimp_Id" Type="Int32" Nullable="false" />
+          <Property Name="uimp_IdModulu" Type="Int32" Nullable="false" />
+          <Property Name="uimp_Typ" Type="Int32" Nullable="false" />
+          <Property Name="uimp_IdObiektu" Type="Int32" Nullable="false" />
+          <Property Name="uimp_Pozycja" Type="Int32" Nullable="false" />
+          <Property Name="uimp_Styl" Type="Int32" Nullable="false" />
+          <Property Name="uimp_Napis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ui_Modul" Relationship="Self.FK_ui_ModulPowiazany_ui_Modul" FromRole="ui_ModulPowiazany" ToRole="ui_Modul" />
+        </EntityType>
+        <Association Name="FK_tw__Towar_sl_GrupaTw">
+          <End Role="sl_GrupaTw" Type="Self.sl_GrupaTw" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_GrupaTw">
+              <PropertyRef Name="grt_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdGrupa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_sl_ModelTowar_tw__Towar">
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="sl_ModelTowar" Type="Self.sl_ModelTowar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tw__Towar">
+              <PropertyRef Name="tw_Id" />
+            </Principal>
+            <Dependent Role="sl_ModelTowar">
+              <PropertyRef Name="mtw_IdTowar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_sl_Rabat">
+          <End Role="sl_Rabat" Type="Self.sl_Rabat" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_Rabat">
+              <PropertyRef Name="rt_id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdRabat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_sl_StawkaVAT">
+          <End Role="sl_StawkaVAT" Type="Self.sl_StawkaVAT" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_StawkaVAT">
+              <PropertyRef Name="vat_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdVatSp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_sl_StawkaVAT1">
+          <End Role="sl_StawkaVAT" Type="Self.sl_StawkaVAT" Multiplicity="0..1" />
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sl_StawkaVAT">
+              <PropertyRef Name="vat_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar">
+              <PropertyRef Name="tw_IdVatZak" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tw__Towar_tw__Towar">
+          <End Role="tw__Towar" Type="Self.tw__Towar" Multiplicity="0..1" />
+          <End Role="tw__Towar1" Type="Self.tw__Towar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tw__Towar">
+              <PropertyRef Name="tw_Id" />
+            </Principal>
+            <Dependent Role="tw__Towar1">
+              <PropertyRef Name="tw_IdOpakowanie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui_Funkcja_ui_Modul">
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="1" />
+          <End Role="ui_Funkcja" Type="Self.ui_Funkcja" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Modul">
+              <PropertyRef Name="uim_Id" />
+            </Principal>
+            <Dependent Role="ui_Funkcja">
+              <PropertyRef Name="uif_IdModulu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui_Modul_ui_Kolor">
+          <End Role="ui_Kolor" Type="Self.ui_Kolor" Multiplicity="1" />
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Kolor">
+              <PropertyRef Name="uic_Id" />
+            </Principal>
+            <Dependent Role="ui_Modul">
+              <PropertyRef Name="uim_SchematKolorow" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui__Modul_ui_Modul">
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="0..1" />
+          <End Role="ui_Modul1" Type="Self.ui_Modul" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Modul">
+              <PropertyRef Name="uim_Id" />
+            </Principal>
+            <Dependent Role="ui_Modul1">
+              <PropertyRef Name="uim_IdWzorca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ui_ModulPowiazany_ui_Modul">
+          <End Role="ui_Modul" Type="Self.ui_Modul" Multiplicity="1" />
+          <End Role="ui_ModulPowiazany" Type="Self.ui_ModulPowiazany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ui_Modul">
+              <PropertyRef Name="uim_Id" />
+            </Principal>
+            <Dependent Role="ui_ModulPowiazany">
+              <PropertyRef Name="uimp_IdModulu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OlaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sl_GrupaTw" EntityType="Self.sl_GrupaTw" />
+          <EntitySet Name="sl_ModelTowar" EntityType="Self.sl_ModelTowar" />
+          <EntitySet Name="sl_Rabat" EntityType="Self.sl_Rabat" />
+          <EntitySet Name="sl_StawkaVAT" EntityType="Self.sl_StawkaVAT" />
+          <EntitySet Name="tw__Towar" EntityType="Self.tw__Towar" />
+          <EntitySet Name="ui_Funkcja" EntityType="Self.ui_Funkcja" />
+          <EntitySet Name="ui_Kolor" EntityType="Self.ui_Kolor" />
+          <EntitySet Name="ui_Modul" EntityType="Self.ui_Modul" />
+          <EntitySet Name="ui_ModulPowiazany" EntityType="Self.ui_ModulPowiazany" />
+          <AssociationSet Name="FK_tw__Towar_sl_GrupaTw" Association="Self.FK_tw__Towar_sl_GrupaTw">
+            <End Role="sl_GrupaTw" EntitySet="sl_GrupaTw" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_sl_ModelTowar_tw__Towar" Association="Self.FK_sl_ModelTowar_tw__Towar">
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+            <End Role="sl_ModelTowar" EntitySet="sl_ModelTowar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_sl_Rabat" Association="Self.FK_tw__Towar_sl_Rabat">
+            <End Role="sl_Rabat" EntitySet="sl_Rabat" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_sl_StawkaVAT" Association="Self.FK_tw__Towar_sl_StawkaVAT">
+            <End Role="sl_StawkaVAT" EntitySet="sl_StawkaVAT" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_sl_StawkaVAT1" Association="Self.FK_tw__Towar_sl_StawkaVAT1">
+            <End Role="sl_StawkaVAT" EntitySet="sl_StawkaVAT" />
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tw__Towar_tw__Towar" Association="Self.FK_tw__Towar_tw__Towar">
+            <End Role="tw__Towar" EntitySet="tw__Towar" />
+            <End Role="tw__Towar1" EntitySet="tw__Towar" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui_Funkcja_ui_Modul" Association="Self.FK_ui_Funkcja_ui_Modul">
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+            <End Role="ui_Funkcja" EntitySet="ui_Funkcja" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui_Modul_ui_Kolor" Association="Self.FK_ui_Modul_ui_Kolor">
+            <End Role="ui_Kolor" EntitySet="ui_Kolor" />
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui__Modul_ui_Modul" Association="Self.FK_ui__Modul_ui_Modul">
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+            <End Role="ui_Modul1" EntitySet="ui_Modul" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ui_ModulPowiazany_ui_Modul" Association="Self.FK_ui_ModulPowiazany_ui_Modul">
+            <End Role="ui_Modul" EntitySet="ui_Modul" />
+            <End Role="ui_ModulPowiazany" EntitySet="ui_ModulPowiazany" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OlaModelStoreContainer" CdmEntityContainer="OlaEntities">
+          <EntitySetMapping Name="sl_GrupaTw">
+            <EntityTypeMapping TypeName="OlaModel.sl_GrupaTw">
+              <MappingFragment StoreEntitySet="sl_GrupaTw">
+                <ScalarProperty Name="grt_Id" ColumnName="grt_Id" />
+                <ScalarProperty Name="grt_Nazwa" ColumnName="grt_Nazwa" />
+                <ScalarProperty Name="grt_NrAnalityka" ColumnName="grt_NrAnalityka" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sl_ModelTowar">
+            <EntityTypeMapping TypeName="OlaModel.sl_ModelTowar">
+              <MappingFragment StoreEntitySet="sl_ModelTowar">
+                <ScalarProperty Name="mtw_Id" ColumnName="mtw_Id" />
+                <ScalarProperty Name="mtw_IdModel" ColumnName="mtw_IdModel" />
+                <ScalarProperty Name="mtw_IdTowar" ColumnName="mtw_IdTowar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sl_Rabat">
+            <EntityTypeMapping TypeName="OlaModel.sl_Rabat">
+              <MappingFragment StoreEntitySet="sl_Rabat">
+                <ScalarProperty Name="rt_id" ColumnName="rt_id" />
+                <ScalarProperty Name="rt_Nazwa" ColumnName="rt_Nazwa" />
+                <ScalarProperty Name="rt_Rodzaj" ColumnName="rt_Rodzaj" />
+                <ScalarProperty Name="rt_Procent" ColumnName="rt_Procent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sl_StawkaVAT">
+            <EntityTypeMapping TypeName="OlaModel.sl_StawkaVAT">
+              <MappingFragment StoreEntitySet="sl_StawkaVAT">
+                <ScalarProperty Name="vat_Id" ColumnName="vat_Id" />
+                <ScalarProperty Name="vat_Nazwa" ColumnName="vat_Nazwa" />
+                <ScalarProperty Name="vat_Stawka" ColumnName="vat_Stawka" />
+                <ScalarProperty Name="vat_Symbol" ColumnName="vat_Symbol" />
+                <ScalarProperty Name="vat_CzySystemowa" ColumnName="vat_CzySystemowa" />
+                <ScalarProperty Name="vat_CzyWidoczna" ColumnName="vat_CzyWidoczna" />
+                <ScalarProperty Name="vat_Pozycja" ColumnName="vat_Pozycja" />
+                <ScalarProperty Name="vat_PozSprzedaz" ColumnName="vat_PozSprzedaz" />
+                <ScalarProperty Name="vat_PozZakup" ColumnName="vat_PozZakup" />
+                <ScalarProperty Name="vat_PozRR" ColumnName="vat_PozRR" />
+                <ScalarProperty Name="vat_PozDomyslna" ColumnName="vat_PozDomyslna" />
+                <ScalarProperty Name="vat_Rodzaj" ColumnName="vat_Rodzaj" />
+                <ScalarProperty Name="vat_StawkaZagraniczna" ColumnName="vat_StawkaZagraniczna" />
+                <ScalarProperty Name="vat_StawkaZagranicznaPdst" ColumnName="vat_StawkaZagranicznaPdst" />
+                <ScalarProperty Name="vat_IdPanstwo" ColumnName="vat_IdPanstwo" />
+                <ScalarProperty Name="vat_UePanstwo" ColumnName="vat_UePanstwo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tw__Towar">
+            <EntityTypeMapping TypeName="OlaModel.tw__Towar">
+              <MappingFragment StoreEntitySet="tw__Towar">
+                <ScalarProperty Name="tw_Id" ColumnName="tw_Id" />
+                <ScalarProperty Name="tw_Zablokowany" ColumnName="tw_Zablokowany" />
+                <ScalarProperty Name="tw_Rodzaj" ColumnName="tw_Rodzaj" />
+                <ScalarProperty Name="tw_Symbol" ColumnName="tw_Symbol" />
+                <ScalarProperty Name="tw_Nazwa" ColumnName="tw_Nazwa" />
+                <ScalarProperty Name="tw_Opis" ColumnName="tw_Opis" />
+                <ScalarProperty Name="tw_IdVatSp" ColumnName="tw_IdVatSp" />
+                <ScalarProperty Name="tw_IdVatZak" ColumnName="tw_IdVatZak" />
+                <ScalarProperty Name="tw_JakPrzySp" ColumnName="tw_JakPrzySp" />
+                <ScalarProperty Name="tw_JednMiary" ColumnName="tw_JednMiary" />
+                <ScalarProperty Name="tw_PKWiU" ColumnName="tw_PKWiU" />
+                <ScalarProperty Name="tw_SWW" ColumnName="tw_SWW" />
+                <ScalarProperty Name="tw_IdRabat" ColumnName="tw_IdRabat" />
+                <ScalarProperty Name="tw_IdOpakowanie" ColumnName="tw_IdOpakowanie" />
+                <ScalarProperty Name="tw_PrzezWartosc" ColumnName="tw_PrzezWartosc" />
+                <ScalarProperty Name="tw_IdPodstDostawca" ColumnName="tw_IdPodstDostawca" />
+                <ScalarProperty Name="tw_DostSymbol" ColumnName="tw_DostSymbol" />
+                <ScalarProperty Name="tw_CzasDostawy" ColumnName="tw_CzasDostawy" />
+                <ScalarProperty Name="tw_UrzNazwa" ColumnName="tw_UrzNazwa" />
+                <ScalarProperty Name="tw_PLU" ColumnName="tw_PLU" />
+                <ScalarProperty Name="tw_PodstKodKresk" ColumnName="tw_PodstKodKresk" />
+                <ScalarProperty Name="tw_IdTypKodu" ColumnName="tw_IdTypKodu" />
+                <ScalarProperty Name="tw_CenaOtwarta" ColumnName="tw_CenaOtwarta" />
+                <ScalarProperty Name="tw_WagaEtykiet" ColumnName="tw_WagaEtykiet" />
+                <ScalarProperty Name="tw_KontrolaTW" ColumnName="tw_KontrolaTW" />
+                <ScalarProperty Name="tw_StanMin" ColumnName="tw_StanMin" />
+                <ScalarProperty Name="tw_JednStanMin" ColumnName="tw_JednStanMin" />
+                <ScalarProperty Name="tw_DniWaznosc" ColumnName="tw_DniWaznosc" />
+                <ScalarProperty Name="tw_IdGrupa" ColumnName="tw_IdGrupa" />
+                <ScalarProperty Name="tw_WWW" ColumnName="tw_WWW" />
+                <ScalarProperty Name="tw_SklepInternet" ColumnName="tw_SklepInternet" />
+                <ScalarProperty Name="tw_Pole1" ColumnName="tw_Pole1" />
+                <ScalarProperty Name="tw_Pole2" ColumnName="tw_Pole2" />
+                <ScalarProperty Name="tw_Pole3" ColumnName="tw_Pole3" />
+                <ScalarProperty Name="tw_Pole4" ColumnName="tw_Pole4" />
+                <ScalarProperty Name="tw_Pole5" ColumnName="tw_Pole5" />
+                <ScalarProperty Name="tw_Pole6" ColumnName="tw_Pole6" />
+                <ScalarProperty Name="tw_Pole7" ColumnName="tw_Pole7" />
+                <ScalarProperty Name="tw_Pole8" ColumnName="tw_Pole8" />
+                <ScalarProperty Name="tw_Uwagi" ColumnName="tw_Uwagi" />
+                <ScalarProperty Name="tw_Logo" ColumnName="tw_Logo" />
+                <ScalarProperty Name="tw_Usuniety" ColumnName="tw_Usuniety" />
+                <ScalarProperty Name="tw_Objetosc" ColumnName="tw_Objetosc" />
+                <ScalarProperty Name="tw_Masa" ColumnName="tw_Masa" />
+                <ScalarProperty Name="tw_Charakter" ColumnName="tw_Charakter" />
+                <ScalarProperty Name="tw_JednMiaryZak" ColumnName="tw_JednMiaryZak" />
+                <ScalarProperty Name="tw_JMZakInna" ColumnName="tw_JMZakInna" />
+                <ScalarProperty Name="tw_KodTowaru" ColumnName="tw_KodTowaru" />
+                <ScalarProperty Name="tw_IdKrajuPochodzenia" ColumnName="tw_IdKrajuPochodzenia" />
+                <ScalarProperty Name="tw_IdUJM" ColumnName="tw_IdUJM" />
+                <ScalarProperty Name="tw_JednMiarySprz" ColumnName="tw_JednMiarySprz" />
+                <ScalarProperty Name="tw_JMSprzInna" ColumnName="tw_JMSprzInna" />
+                <ScalarProperty Name="tw_SerwisAukcyjny" ColumnName="tw_SerwisAukcyjny" />
+                <ScalarProperty Name="tw_IdProducenta" ColumnName="tw_IdProducenta" />
+                <ScalarProperty Name="tw_SprzedazMobilna" ColumnName="tw_SprzedazMobilna" />
+                <ScalarProperty Name="tw_IsFundPromocji" ColumnName="tw_IsFundPromocji" />
+                <ScalarProperty Name="tw_IdFundPromocji" ColumnName="tw_IdFundPromocji" />
+                <ScalarProperty Name="tw_DomyslnaKategoria" ColumnName="tw_DomyslnaKategoria" />
+                <ScalarProperty Name="tw_Wysokosc" ColumnName="tw_Wysokosc" />
+                <ScalarProperty Name="tw_Szerokosc" ColumnName="tw_Szerokosc" />
+                <ScalarProperty Name="tw_Glebokosc" ColumnName="tw_Glebokosc" />
+                <ScalarProperty Name="tw_StanMaks" ColumnName="tw_StanMaks" />
+                <ScalarProperty Name="tw_Akcyza" ColumnName="tw_Akcyza" />
+                <ScalarProperty Name="tw_AkcyzaZaznacz" ColumnName="tw_AkcyzaZaznacz" />
+                <ScalarProperty Name="tw_AkcyzaKwota" ColumnName="tw_AkcyzaKwota" />
+                <ScalarProperty Name="tw_ObrotMarza" ColumnName="tw_ObrotMarza" />
+                <ScalarProperty Name="tw_OdwrotneObciazenie" ColumnName="tw_OdwrotneObciazenie" />
+                <ScalarProperty Name="tw_ProgKwotowyOO" ColumnName="tw_ProgKwotowyOO" />
+                <ScalarProperty Name="tw_DodawalnyDoZW" ColumnName="tw_DodawalnyDoZW" />
+                <ScalarProperty Name="tw_isbn" ColumnName="tw_isbn" />
+                <ScalarProperty Name="tw_bloz_7" ColumnName="tw_bloz_7" />
+                <ScalarProperty Name="tw_bloz_12" ColumnName="tw_bloz_12" />
+                <ScalarProperty Name="tw_KodUProducenta" ColumnName="tw_KodUProducenta" />
+                <ScalarProperty Name="tw_Komunikat" ColumnName="tw_Komunikat" />
+                <ScalarProperty Name="tw_KomunikatOd" ColumnName="tw_KomunikatOd" />
+                <ScalarProperty Name="tw_KomunikatDokumenty" ColumnName="tw_KomunikatDokumenty" />
+                <ScalarProperty Name="tw_MechanizmPodzielonejPlatnosci" ColumnName="tw_MechanizmPodzielonejPlatnosci" />
+                <ScalarProperty Name="tw_GrupaJpkVat" ColumnName="tw_GrupaJpkVat" />
+                <ScalarProperty Name="tw_OplCukrowaPodlega" ColumnName="tw_OplCukrowaPodlega" />
+                <ScalarProperty Name="tw_OplCukrowaObj" ColumnName="tw_OplCukrowaObj" />
+                <ScalarProperty Name="tw_OplCukrowaZawartoscCukru" ColumnName="tw_OplCukrowaZawartoscCukru" />
+                <ScalarProperty Name="tw_OplCukrowaInneSlodzace" ColumnName="tw_OplCukrowaInneSlodzace" />
+                <ScalarProperty Name="tw_OplCukrowaSok" ColumnName="tw_OplCukrowaSok" />
+                <ScalarProperty Name="tw_OplCukrowaKwota" ColumnName="tw_OplCukrowaKwota" />
+                <ScalarProperty Name="tw_OplCukrowaKofeinaPodlega" ColumnName="tw_OplCukrowaKofeinaPodlega" />
+                <ScalarProperty Name="tw_OplCukrowaKofeinaKwota" ColumnName="tw_OplCukrowaKofeinaKwota" />
+                <ScalarProperty Name="tw_OplCukrowaNapojWeglElektr" ColumnName="tw_OplCukrowaNapojWeglElektr" />
+                <ScalarProperty Name="tw_OplCukrowaKwotaPowyzej" ColumnName="tw_OplCukrowaKwotaPowyzej" />
+                <ScalarProperty Name="tw_MasaNetto" ColumnName="tw_MasaNetto" />
+                <ScalarProperty Name="tw_IdKoduWyrobuAkcyzowego" ColumnName="tw_IdKoduWyrobuAkcyzowego" />
+                <ScalarProperty Name="tw_AkcyzaMarkaWyrobow" ColumnName="tw_AkcyzaMarkaWyrobow" />
+                <ScalarProperty Name="tw_AkcyzaWielkoscProducenta" ColumnName="tw_AkcyzaWielkoscProducenta" />
+                <ScalarProperty Name="tw_ZnakiAkcyzy" ColumnName="tw_ZnakiAkcyzy" />
+                <ScalarProperty Name="tw_DataZmianyVatSprzedazy" ColumnName="tw_DataZmianyVatSprzedazy" />
+                <ScalarProperty Name="tw_WegielPodlegaOswiadczeniu" ColumnName="tw_WegielPodlegaOswiadczeniu" />
+                <ScalarProperty Name="tw_WegielOpisPochodzenia" ColumnName="tw_WegielOpisPochodzenia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ui_Funkcja">
+            <EntityTypeMapping TypeName="OlaModel.ui_Funkcja">
+              <MappingFragment StoreEntitySet="ui_Funkcja">
+                <ScalarProperty Name="uif_Id" ColumnName="uif_Id" />
+                <ScalarProperty Name="uif_IdModulu" ColumnName="uif_IdModulu" />
+                <ScalarProperty Name="uif_Worek" ColumnName="uif_Worek" />
+                <ScalarProperty Name="uif_Pozycja" ColumnName="uif_Pozycja" />
+                <ScalarProperty Name="uif_PozycjaOjca" ColumnName="uif_PozycjaOjca" />
+                <ScalarProperty Name="uif_TypOperacji" ColumnName="uif_TypOperacji" />
+                <ScalarProperty Name="uif_IdOperacji" ColumnName="uif_IdOperacji" />
+                <ScalarProperty Name="uif_Styl" ColumnName="uif_Styl" />
+                <ScalarProperty Name="uif_Napis" ColumnName="uif_Napis" />
+                <ScalarProperty Name="uif_Podwidok" ColumnName="uif_Podwidok" />
+                <ScalarProperty Name="uif_Domyslna" ColumnName="uif_Domyslna" />
+                <ScalarProperty Name="uif_Rozwijaj" ColumnName="uif_Rozwijaj" />
+                <ScalarProperty Name="uif_OdRazuMenu" ColumnName="uif_OdRazuMenu" />
+                <ScalarProperty Name="uif_Parametr" ColumnName="uif_Parametr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ui_Kolor">
+            <EntityTypeMapping TypeName="OlaModel.ui_Kolor">
+              <MappingFragment StoreEntitySet="ui_Kolor">
+                <ScalarProperty Name="uic_Id" ColumnName="uic_Id" />
+                <ScalarProperty Name="uic_Nazwa" ColumnName="uic_Nazwa" />
+                <ScalarProperty Name="uic_SerwisTloGora" ColumnName="uic_SerwisTloGora" />
+                <ScalarProperty Name="uic_SerwisTloDol" ColumnName="uic_SerwisTloDol" />
+                <ScalarProperty Name="uic_SerwisTekst" ColumnName="uic_SerwisTekst" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ui_Modul">
+            <EntityTypeMapping TypeName="OlaModel.ui_Modul">
+              <MappingFragment StoreEntitySet="ui_Modul">
+                <ScalarProperty Name="uim_Id" ColumnName="uim_Id" />
+                <ScalarProperty Name="uim_Typ" ColumnName="uim_Typ" />
+                <ScalarProperty Name="uim_Program" ColumnName="uim_Program" />
+                <ScalarProperty Name="uim_IdWzorca" ColumnName="uim_IdWzorca" />
+                <ScalarProperty Name="uim_Progid" ColumnName="uim_Progid" />
+                <ScalarProperty Name="uim_TypKontekstu" ColumnName="uim_TypKontekstu" />
+                <ScalarProperty Name="uim_Kontekst" ColumnName="uim_Kontekst" />
+                <ScalarProperty Name="uim_Tytul" ColumnName="uim_Tytul" />
+                <ScalarProperty Name="uim_Podtytul" ColumnName="uim_Podtytul" />
+                <ScalarProperty Name="uim_VespDef" ColumnName="uim_VespDef" />
+                <ScalarProperty Name="uim_XSLT" ColumnName="uim_XSLT" />
+                <ScalarProperty Name="uim_HTML" ColumnName="uim_HTML" />
+                <ScalarProperty Name="uim_SchematKolorow" ColumnName="uim_SchematKolorow" />
+                <ScalarProperty Name="uim_FiltrWymagany" ColumnName="uim_FiltrWymagany" />
+                <ScalarProperty Name="uim_StatusNowosci" ColumnName="uim_StatusNowosci" />
+                <ScalarProperty Name="uim_Opis" ColumnName="uim_Opis" />
+                <ScalarProperty Name="uim_Ukryte" ColumnName="uim_Ukryte" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ui_ModulPowiazany">
+            <EntityTypeMapping TypeName="OlaModel.ui_ModulPowiazany">
+              <MappingFragment StoreEntitySet="ui_ModulPowiazany">
+                <ScalarProperty Name="uimp_Id" ColumnName="uimp_Id" />
+                <ScalarProperty Name="uimp_IdModulu" ColumnName="uimp_IdModulu" />
+                <ScalarProperty Name="uimp_Typ" ColumnName="uimp_Typ" />
+                <ScalarProperty Name="uimp_IdObiektu" ColumnName="uimp_IdObiektu" />
+                <ScalarProperty Name="uimp_Pozycja" ColumnName="uimp_Pozycja" />
+                <ScalarProperty Name="uimp_Styl" ColumnName="uimp_Styl" />
+                <ScalarProperty Name="uimp_Napis" ColumnName="uimp_Napis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
